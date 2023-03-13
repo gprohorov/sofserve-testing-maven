@@ -12,10 +12,15 @@ import java.util.regex.Pattern;
 
 public class MyUtils {
     public static boolean checkEmail(String text) {
-        if (!text.contains("@")) {
+        if (!text.contains("@") || text == null) {
             return false;
         }
         var arr1 = text.split("@");
+
+        if (arr1.length > 2) {
+            return false;
+        }
+
         String username = arr1[0];
         if (!Character.isLetter(username.charAt(0))) {
             return false;
