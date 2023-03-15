@@ -31,6 +31,7 @@ class MyUtilsTest {
     }
         @ParameterizedTest
     @ValueSource(strings = {
+            "",
             "username#gmail.com", // @ absent
             "username.gmail.com",  // @ absent
             "1username@gmail.com",  // begins from number
